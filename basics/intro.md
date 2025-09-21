@@ -45,10 +45,9 @@ how ?
 - it first parses the .tf file and finds the resources and its attributes
 - then it finds the dependencies by looking at the references
   
-  ``` hcl
-resource "aws_subnet" "subnet1" {
+ example :   resource "aws_subnet" "subnet1" {
   vpc_id     = aws_vpc.main.id
-  cidr_block = "10.0.1.0/24"} ```
+  cidr_block = "10.0.1.0/24"} 
 
 - here the resource is subnet but there is vpc_id which is the reference
 - then it builds a graph like structure nodes- resources and edges- dependency
