@@ -58,6 +58,19 @@ how ?
 - then it gives error during terraform plan or terraform apply
 - there are two types of dependency
        - explicit : defined like `depends_on    = [aws_s3_bucket.logs]`
+
+
+### Common attributes used in terraform
+| Resource             | Must-Know Attributes                                                      |
+| -------------------- | ------------------------------------------------------------------------- |
+| **VPC**              | `cidr_block`                                                              |
+| **Subnet**           | `cidr_block`, `vpc_id`                                                    |
+| **Internet Gateway** | `vpc_id`                                                                  |
+| **Security Group**   | `vpc_id`, `ingress`, `egress`                                             |
+| **EC2 Instance**     | `ami`, `instance_type`, `subnet_id`, `vpc_security_group_ids`, `key_name` |
+| **S3 Bucket**        | `bucket`                                                                  |
+| **IAM Role**         | `name`, `assume_role_policy`                                              |
+
      
      
      
