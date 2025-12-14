@@ -12,8 +12,9 @@
 - main.tf
 - outputs.tf
 
-##### inside modules values should not be hardcoded because - all config must come from inputs
-##### Module composition :
+#### inside modules values should not be hardcoded because - all config must come from inputs
+#### u can also use publicly available modules in terraform registry. - u will find the code copy paste and use it.  
+#### Module composition :
 - using outputs of one module as inputs to another module
 - ec2 module needs vpc and subnet id(which are created by vpc module)
 - So you “compose” them like this:
@@ -32,9 +33,6 @@ bcz it has to Build a dependency graph and Know creation order and Avoid race co
 - Root passes it to EC2
 - EC2 uses it
   
-
-
-
 
 
 ## Reusable means?
